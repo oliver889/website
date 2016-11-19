@@ -1,0 +1,91 @@
+/*This is all CSS code. Doesn't need any html like <style>*/
+
+body {
+	background-color: rgb(199,231,220); 
+	background-image: url(http://atextures.com/wp-content/uploads/2014/08/Marble-Stone-Background-170-625x443.jpg);
+	background-size: cover;
+	/*this is getting overwritten because of what is in the html, specifically my Tom Brady picture*/
+}
+
+img {
+	margin: 20px;
+	/*adds a margin around the pictures*/
+	height: 20%;
+	/*if we want to keep aspect ratio, then we would use percentages. If you want to set size, then use ##px*/
+}
+
+h1 {
+	/* To add a comment in CSS, you use this format */
+	color: blue;
+	background-color: orange;
+	font-family: century;
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+	background-color: orange;
+}
+
+p {
+	color: red; 
+	font-size: 16px;
+	background-color: orange;
+	font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+.priority{
+	color: purple;
+	font-size: 30px;
+}
+
+p.priority {
+	color: yellow;
+}
+
+#paragraph1 {
+	color: white;
+	font-family: "Trebuchet MS";
+}
+
+li {
+	color: green; 
+	font-size: 14px;
+	background-color: orange;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+#list1 {
+	background-color: yellow;
+}
+
+#listdiv {
+	font-family: "Calibri";
+}
+
+#mainheader {
+	text-align: center;
+}
+
+#description {
+	text-align: center;
+}
+
+#buttonclassic {
+	color: blue;
+}
+
+#mycarousel {
+	background-color: yellow;
+	font-size: 30px;
+	text-align: center;
+	font-family: "Calibri";	
+}
+
+#prettyParagraph {
+	font-size: 2px;
+	background-color: transparent;
+}

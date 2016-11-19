@@ -1,0 +1,219 @@
+</DOCTYPE html>
+<!--This is how you add a comment in html (NOT CSS). Also, it is best practice to include to indicate that they should use the most recent version of html-->
+
+<html> <!--always open with <html>-->
+
+	<head>
+
+		<title>Oliver's First Website!</title>
+		<!--controls what shows up on the browser tab-->
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<!--bootstrap plugin has a lot of opensource features, the navigation bar and the jumbotron below use this-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<!--bringing in open source javascripts from jQuery-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!--bringing in open source Javascript from bootstrap-->
+
+		<link link rel="stylesheet" type="text/css" href="style.css">
+		<!--this links to the css spreadsheet-->
+
+		<!--style can also be added specifically in the html script. I disabling the style below just to see if the style.css works. Okay to have css in heading, but probably more efficient to keep it in separate file
+		<style>
+			/*to add a comment in CSS, you use this format. You can also put all of this into an external css file that gets pulled in. The advantage is you can make your code a bit cleaner, especially if you have a lot of CSS*/
+			h1 {
+				color: blue;
+			}
+			p {
+				color: red; 
+				font-size: 16px;
+			}
+			li {
+				color: green; 
+				font-size: 14px;
+			}
+		</style>
+		-->
+
+	</head>
+
+	<body>
+
+		<!--adding a navigation bar at the top, need bootstrap to get this in-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" datatoggle="collapse" data-target="#navbar" aria-expanded="false" ariacontrols="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">My First Website</a>
+				</div>
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home - Broken Link</a></li>
+						<li><a href="#overview">Overview - Broken Link</a></li>
+						<li><a href="#features">Features - Broken link</a></li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		<!--adding a jumbotron at the top below the navigation bar, need bootstrap to get this in-->
+		<header>
+			<div class="container">
+				<div class="jumbotron">
+					<h1 id="mainheader">Greatest City in the US</h1>
+					<p class="lead"; id="description">
+						Talking about Boston sports
+					</p>
+					<p>
+						<a class="btn btn-lg btn-success" href="http://gronknation.com/rob/" target="_blank" role="button" id="buttonclassic">Learn more about me</a>
+					</p>
+				</div>
+			</div>
+		</header>
+
+		<h1 id="prettyHeader">Hello!</h1>
+		<!--created this so to test some Javascript later on-->
+
+		<h1>Oliver's First Website</h1>
+		<!--header size controlled by number. 1 is largest, 6 is smallest-->
+
+		<h3>Boston Sports</h3>
+
+		<p id="paragraph1"> 
+			<!--this allows you to edit just "paragraph1" in css, which can overwrite what you set for just regular p-->
+			<strong>Boston</strong> sports <small>are</small> the <em>best</em>
+			<!--this is just playing around with formats in html. Small things like this you can use html, but otherwise you should probably use CSS-->
+		</p>
+
+		<div id="paragraphdiv">
+			<p class="priority">
+				These are the best things about <strong><span style="color:blue">Boston Sports</span></strong><br>
+				<a href="http://www.usatoday.com/story/gameon/2013/03/27/rob-gronkowski-tries-to-anchor-sportscenter/2025633/" target="_blank">Don't believe me? Gronk is proof</a>
+				<!-- You can format inline with html using strong, small, em, etc. To open the link in a new page, add the target="_blank"-->
+			</p>
+		</div>
+
+		<!--THIS IS AN EXAMPLE OF USING JAVASCRIPT TO TELL A USER IF WHAT THEY ENTERED WAS CORRECT. BEST PRACTICE WOULD HAVE JAVASCRIPT AT THE BOTTOM SO THAT YOU LOAD THE CONTENT FIRST, THEN THE SLOWER JAVASCRIPT LAST-->
+		<input id="numericInput" type="number">
+		<p id="result"></p>
+			<button type="button" onclick="testInput()">How many Super Bowls have the Patriots won?</button>
+			<script>
+				//JAVASCRIPT COMMENTS USE THIS FORMAT//
+				function testInput() {
+					//Create variable to store test rest//
+					var text;
+					//Get the value fo the input field with id="numb"//
+					var x = document.getElementById("numericInput").value;
+					if (isNaN(x) || x < 4 || x > 4) {
+						//isNaN = is Not a Number. || is "OR" in JavaScript, & is "AND" in Javascript)//
+						text = "Wrong Input"
+					} else {
+						text = "Correct Input"
+					}
+					document.getElementById("result").innerHTML = text;
+				}
+			</script>
+
+
+		<div class="container">
+			<!--requires bootstrap to make this work. the "md" portion controls what size screen will cause this to go from columns to stacked. the numbers afterwards need to add to up <=12-->
+			<div class="row2">
+				<div class="col-md-4">Patriots</div>
+				<div class="col-md-4">Red Sox</div>
+				<div class="col-md-4">Celtics</div>
+			</div> <br>
+			<div class="row">
+				<div class="col-md-2">Tom Brady</div>
+				<div class="col-md-2">Gronk</div>
+				<div class="col-md-2">Big Papi</div>
+				<div class="col-md-2">Mookie</div>
+				<div class="col-md-2">Isaiah Thomas</div>
+				<div class="col-md-2">Al Horford</div>
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<!--This is adding a carousel javascript into our page. The script to execute is going to be near the bottom of the page-->
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					This is a crappy website
+				</div>
+				<div class="item">
+					But I'm still learning
+				</div>
+				<div class="item">
+					Do you think this is ok?
+				</div>
+				<div class="item">
+					I'm doing my best
+				</div>
+				<div class="item">
+					Whatever.
+				</div>
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<div id="listdiv">
+			<!--purpose of this is to create an identifier to only address this section. div is usually used to make formatting groups-->
+			<ul>
+					<li id="list1">Patriots - 4X Champions</li>
+						<img src="https://static.festisite.com/static/partylogo/img/logos/patriots.png">
+					<li class="priority">Tom Brady - The <strong>GOAT</strong></li>
+						<img src="tom brady.jpg">
+					<li>Red Sox - No Longer Cursed</li>
+						<img src="red sox.png">
+					<li>Celtics - Green 17</li>
+						<img src="http://i.cdn.turner.com/nba/nba/teamsites/images/legacy/celtics/CelticsLogo_History.gif">
+			</ul>
+		</div>
+
+		<p id="prettyParagraph">
+			I'm from Wayland, MA
+		</p>
+		<button type="button" onclick="applyStyling()">Make the header pretty and unlock secret text!</button>
+		<script>
+			function applyStyling() {
+				var paragraph = document.getElementById("prettyParagraph");
+				paragraph.style.color = "green";
+				paragraph.style.fontSize = "80px";
+				paragraph.style.fontWeight = "700"
+				
+				var header = document.getElementById("prettyHeader");
+				header.style.color = "green";
+				header.style.fontSize = "80px";
+				header.style.fontWeight = "700"
+			}
+		</script>
+
+		<p id="myParagraphs>"> </p>
+		<button type="button" onclick="document.getElementByID("myParagraphs").innerHTML='Hello World'">I can't get this button to work :/</button>
+		<!--THIS ISN'T WORKING, WHY?-->
+
+		<!--we've disabled the following, but you can add something that creates an alert pop up on the page
+		<script>
+			var result = 5 + 3;
+			alert("5 + 3 is " + result);
+		</script>
+		-->
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#myCarousel").carousel({interval: 2000});
+				//the interval sets how quickly the carousel moves. 2000 indicates 2 seconds//
+			})
+		</script>
+		<!--This is to activate the carousel and set how quickly it moves-->
+
+	</body>	
+
+</html>
